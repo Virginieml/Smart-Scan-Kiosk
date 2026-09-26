@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registered Attendees | Smart-Scan Kiosk</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <nav class="side-navigation" aria-label="Main navigation">
+    <a class="attendee-link" href="./attendees.html" aria-current="page">View Attendees</a>
+  </nav>
+  <main class="terminal-card attendee-card">
+    <a class="back-link" href="./index.html">&larr; Back to booking</a>
+    <h1>Registered Attendees</h1>
+    <p class="subtitle">Tickets registered on this device.</p>
+
+    <div class="attendee-summary" aria-live="polite">
+      <span>Total tickets: <strong id="totalCount">0</strong></span>
+      <span>Standard: <strong id="standardCount">0</strong></span>
+      <span>VIP: <strong id="vipCount">0</strong></span>
+      <span>Backstage: <strong id="backstageCount">0</strong></span>
+    </div>
+
+    <div class="attendee-tools">
+      <input id="attendeeSearch" type="search" placeholder="Search name or ticket ID" aria-label="Search attendees">
+      <select id="tierFilter" aria-label="Filter by ticket tier">
+        <option value="all">All tiers</option>
+        <option value="Standard">Standard</option>
+        <option value="VIP">VIP</option>
+        <option value="Backstage">Backstage</option>
+      </select>
+    </div>
+
+    <div class="attendee-table-wrap">
+      <table class="attendee-table">
+        <thead>
+          <tr>
+            <th scope="col">Attendee</th>
+            <th scope="col">Ticket ID</th>
+            <th scope="col">Tier</th>
+            <th scope="col">Registered</th>
+          </tr>
+        </thead>
+        <tbody id="attendeeRows"></tbody>
+      </table>
+      <p id="attendeeEmpty" class="attendee-empty" hidden>No registered tickets yet.</p>
+    </div>
+  </main>
+  <script src="./attendees.js"></script>
+</body>
+</html>

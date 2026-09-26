@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Security Scanner</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <nav class="side-navigation" aria-label="Main navigation">
+    <a class="attendee-link" href="./attendees.html">View Attendees</a>
+  </nav>
+
+  <div class="scanner-card">
+    <h1>Security Scanner</h1>
+    <p class="subtitle">Scan the ticket to authorize entry.</p>
+
+    <div class="ticket-meta">
+      <span>Attendee<strong id="nameDisplay">Guest</strong></span>
+      <span>Tier<strong id="tierDisplay">—</strong></span>
+      <span>Ticket ID<strong id="idDisplay">—</strong></span>
+    </div>
+
+    <div id="statusBox" class="idle">Awaiting Scan</div>
+
+    <button id="authorizeBtn" onclick="authorizeEntry()">Authorize Entry</button>
+  </div>
+
+  <script src="./scanner.js"></script>
+</body>
+</html>

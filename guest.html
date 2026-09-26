@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart-Scan Kiosk — Guest Details</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body class="booking">
+  <nav class="side-navigation" aria-label="Main navigation">
+    <a class="attendee-link" href="./attendees.html">View Attendees</a>
+  </nav>
+
+  <main class="terminal-card guest-card">
+    <div class="terminal-header">
+      <p class="terminal-kicker">SMART-SCAN KIOSK · GUEST DETAILS</p>
+      <h1>Who's this ticket for?</h1>
+      <p>Tier selected: <strong id="tierBadge">—</strong>. Enter a name and generate the ticket.</p>
+    </div>
+
+    <form class="guest-form" id="guestForm">
+      <label for="guestName">Attendee name</label>
+      <input type="text" id="guestName" name="guestName" placeholder="e.g. Amara Williams" autocomplete="name" required>
+      <p class="guest-error" id="guestError" role="alert" hidden></p>
+      <button type="submit" class="tier-generate guest-generate">Generate Ticket</button>
+    </form>
+
+    <div class="ticket-preview" id="ticketPreview" hidden>
+      <div class="ticket-row">
+        <span class="ticket-label">ATTENDEE</span>
+        <span class="ticket-value" id="previewName">—</span>
+      </div>
+      <div class="ticket-row">
+        <span class="ticket-label">TIER</span>
+        <span class="ticket-value" id="previewTier">—</span>
+      </div>
+      <div class="ticket-row">
+        <span class="ticket-label">TICKET ID</span>
+        <span class="ticket-value ticket-id" id="previewId">—</span>
+      </div>
+
+      <button class="authorize-btn" id="proceedBtn">Proceed to Scanner</button>
+    </div>
+  </main>
+
+  <script src="./guest.js"></script>
+</body>
+</html>

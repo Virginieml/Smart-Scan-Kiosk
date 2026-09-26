@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Booking Terminal</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <nav class="side-navigation" aria-label="Main navigation">
+    <a class="attendee-link" href="./attendees.html">View Attendees</a>
+  </nav>
+
+  <div class="terminal-card">
+    <div class="booking-heading">
+      <div>
+        <h1>Event Booking Terminal</h1>
+        <p class="subtitle">Choose a tier to generate your ticket and head to the gate.</p>
+      </div>
+    </div>
+
+    <div class="tier-grid">
+
+      <div class="tier" data-tier="Standard">
+        <div class="swatch"></div>
+        <h2>Standard</h2>
+        <p>General admission. Access to the main floor and concourse.</p>
+        <button onclick="generateTicket('Standard')">Generate Ticket</button>
+      </div>
+
+      <div class="tier" data-tier="VIP">
+        <div class="swatch"></div>
+        <h2>VIP</h2>
+        <p>Reserved seating plus early entry and the lounge bar.</p>
+        <button onclick="generateTicket('VIP')">Generate Ticket</button>
+      </div>
+
+      <div class="tier" data-tier="Backstage">
+        <div class="swatch"></div>
+        <h2>Backstage</h2>
+        <p>All-access pass. Meet the artists and skip every line.</p>
+        <button onclick="generateTicket('Backstage')">Generate Ticket</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
